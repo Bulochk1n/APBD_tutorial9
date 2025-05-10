@@ -98,7 +98,7 @@ public class WarehouseService : IWarehouseService
                 await cmd.ExecuteNonQueryAsync();
             }
 
-            // ... внутри вашего try-блока, после UPDATE FulfilledAt
+            
             int newId;
             await using (var cmd = new SqlCommand(@"INSERT INTO Product_Warehouse
                                                        (IdWarehouse, IdProduct, IdOrder, Amount, Price, CreatedAt)
